@@ -73,15 +73,23 @@
 
 									<h3>Creation of Survey</h3>
 
-									<span class="image featured"><img src="images/hasurveypic.jpg" alt="survey pictures" /></span>
+									<span class="image featured"><img src="images/hasformula.jpg" alt="survey pictures" /></span>
 									<p>Survey 123 utilizes Microsoft Excel to design the components of the Survey. Through a collaborative and iterative process the fields (questions) of interest to the 
 										client were determined and various iterations of the survey were created to align with client feedback.</p>
 
+									<p>The survey is designed to captured geospatial location of addresses through a user submitted geopoint and typed out address. The address information entered is then compared to
+										existing addresses. The address information provided by the client is stored on ArcGIS Online and is able to be compared to the new data by calling upon the Rest Endpoint. The
+										survey is then able to determine if this a new address or an address that already exists in the database. </p>
 									<p>	
 									Each time a survey response is reported the staff member in charge of these responses is informed through an automated email. Once the staff member is informed they are able to 
 										physically verify the address by going to the location of the geopoint. It is important to verify these submissions to maintain data integrity and quality control.</p>
 
-									
+									<h3>Organization of Survey Responses</h3>
+
+									<p>	
+									Once survey responses are submitted they are able to be sorted and preprocessed by Feature Manipulation Engine (FME). This process access the survey responses and put them into 
+									separate categories of interest (e.g. new address, incorrect address, delete address). This process also cleans up the fields so that survey output fields match the ones in the clients existing database</p>
+									<h3>Organization of Survey Responses</h3>
 								</article>
 
 						</div>
