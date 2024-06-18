@@ -23,15 +23,15 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li></li><a href="index.html"> Home </a></li>
+								<li><a href="index.html"> Home </a></li>
 								<li><a href="mtt.html"> Meet the Team </a></li>
-								<li>
-									<a href="#">Methodology</a>
+								<li class="current">
+									<a href="#">Products</a>
 									<ul>
-										<li><a href="alias.html">Alias Name Solution</a></li>
-										<li><a href="Survey.html">Hidden Address Collection Method</a></li>
+										<li><a href="alias.html">ALIAS NAME DATABASE SOLUTION</a></li>
+										<li><a href="Survey.html">HIDDEN ADDRESS COLLECTION METHOD</a></li>
 										<li>
-											<a href="dashboard.html">Visualization of Data</a>
+											<a href="dashboard.html">VISUALIZATION OF DATA</a>
 											<ul>																					
 												<li><a href="dashboard.html">Dashboard</a></li>
 												<li><a href="dashboard.html/.major">Experience Builder</a></li>                                            						
@@ -39,7 +39,7 @@
 										</li>
 									</ul>
 								</li>
-								<li class ="current"><a href="conc.html"> Conclusion </a></li>
+								<li><a href="conc.html"> Conclusion </a></li>
 								
 								
 							</ul>
@@ -49,10 +49,7 @@
 
 			<!-- Banner -->
 				<section id="banner">
-					<header>
-						<h2>Arcana: <em>A responsive site template freebie by <a href="http://html5up.net">HTML5 UP</a></em></h2>
-						<a href="#" class="button">Learn More</a>
-					</header>
+					
 				</section>
 
 			<!-- Highlights -->
@@ -62,22 +59,22 @@
 							<section class="col-4 col-12-narrower">
 								<div class="box highlight">
 									<i class="icon solid major fa-paper-plane"></i>
-									<h3>This Is Important</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<h3>Data Exploration & NENA Standards</h3>
+									<p>Analyzed and familiarized with client-provided address data using NENA standards and Esri's ArcGIS Pro for spatial relationships. Applying NENA data model standards was crucial, necessitating the creation of a new LandmarkAliasName table in the core GDB with the correct format and fields. The project focused on implementing required standards, as outlined in NENA documentation, within the constraints of time. A method for generating NGUIDs according to NENA standards was developed but not required by the client; further details are discussed in the Results and Limitations sections.</p>
 								</div>
 							</section>
 							<section class="col-4 col-12-narrower">
 								<div class="box highlight">
 									<i class="icon solid major fa-pencil-alt"></i>
-									<h3>Also Important</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<h3>BETA FME Workbench: Spatial Matching Gaps</h3>
+									<p>In the prototype model, FeatureJoiner was used to create an inner join between the alias names Schools table and the core address points table, joining on the full address fields for each table. This unsurprisingly did not match all addresses, as some are entered in different ways between the two tables. The power of spatial relationships were then leveraged to account for such missed addresses. And so, those unaccounted for after FeatureJoiner were passed through the spatially sensitive NeighbourFinder transformer. </p>
 								</div>
 							</section>
 							<section class="col-4 col-12-narrower">
 								<div class="box highlight">
 									<i class="icon solid major fa-wrench"></i>
-									<h3>Probably Important</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<h3>Enhancing Robustness & Integrity</h3>
+									<p>To enhance the robustness of the model and account for various types of matching errors or catching unmatched addresses, Tester and AttributeManager transformers were used. Depending on the nature of the alias point feature class and its matches, spatial relationships to the core address data, and how mismatches and unmatched addresses looked, different translation paths were taken; though the four aforementioned transformers were always used.</p>
 								</div>
 							</section>
 						</div>
@@ -88,65 +85,49 @@
 				<section class="wrapper style2">
 					<div class="container">
 						<header class="major">
-							<h2>A gigantic heading you can use for whatever</h2>
-							<p>With a much smaller subtitle hanging out just below it</p>
+							<h2>Alias Name Integration</h2>
+							<p>This maximizes information available to support emergency response (fire, police, EMS)</p>
+							<span class="image featured"><img src="images/aliasworkflow.png" /></span>
+
 						</header>
 					</div>
 				</section>
 
-			<!-- Posts -->
+			<!-- Main -->
 				<section class="wrapper style1">
 					<div class="container">
-						<div class="row">
-							<section class="col-6 col-12-narrower">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/pic01.jpg" alt="" /></a>
-									<div class="inner">
-										<h3>The First Thing</h3>
-										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-									</div>
-								</div>
-							</section>
-							<section class="col-6 col-12-narrower">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="inner">
-										<h3>The Second Thing</h3>
-										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-									</div>
-								</div>
-							</section>
-						</div>
-						<div class="row">
-							<section class="col-6 col-12-narrower">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="inner">
-										<h3>The Third Thing</h3>
-										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-									</div>
-								</div>
-							</section>
-							<section class="col-6 col-12-narrower">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
-									<div class="inner">
-										<h3>The Fourth Thing</h3>
-										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-									</div>
-								</div>
-							</section>
-						</div>
-					</div>
-				</section>
+						<div id="content">
 
-			<!-- CTA -->
-				<section id="cta" class="wrapper style3">
-					<div class="container">
-						<header>
-							<h2>Are you ready to continue your quest?</h2>
-							<a href="#" class="button">Insert Coin</a>
-						</header>
+							<!-- Content -->
+
+								<article>
+									<header>
+										<h2>Data Exploration</h2>
+										<p>Vital for understanding the problem</p>
+									</header>
+
+									<span class="image featured"><img src="images/dataexplorationalias.png" alt="exploration of hidden address solution" /></span>
+
+									<p>Provides a centralized platform for updating and varifying addresses and carefully modifying the database</p>
+
+
+									<h3>Enhancing Robustness and Integrity of the Model</h3>
+
+									<span class="image featured"><img src="images/prototypemodel.png" /></span>
+									<p>To enhance the robustness of the model and account for various types of matching errors or catching unmatched addresses, Tester and AttributeManager transformers were used. Depending on the nature of the alias point feature class and its matches, spatial relationships to the core address data, and how mismatches and unmatched addresses looked, different translation paths were taken; though the four aforementioned transformers were always used.</p>
+
+									<p>Tester transformers were used to test for potential matches between points that were spatially close but did not have address attribute matches. The following is how similar entries were tested; the method was to simplify address field entries to be lowercase and lacking in punctuation. Depending on what a user may view in terms of punctuation (dashes, for example), they can be added to this tool.</p>
+									<p>	
+									Address mismatches within 30 meters were often due to discrepancies in punctuation between attribute fields. AttributeManager transformers were used to identify these discrepancies, and the strongest matches were found when both spatial proximity and address attributes aligned. Unmatched addresses were categorized separately and needed manual review, with efforts to refine the model achieving over 97% accuracy in alias matching, supported by Python scripts for backup and data integrity.</p>
+
+									<h3>Final Product</h3>
+									<span class="image featured"><img src="images/finalworkbench.png"  /></span>
+									<p>	
+									To handle inconsistencies in data entry, a robust error-handling method for translating data through spatial and attribute joins and matches is required. A prototype methodology was developed for the stSchools alias names point feature class and tested on five other alias feature classes: stPlaceofWorship, stChildrensService, stPOICinema, stLibrary, and hsHospitals. This method uses the FeatureJoiner, NeighbourFinder, AttributeManager, and Tester transformers, with NeighbourFinder first applied with a 30-meter search radius. Unmatched aliases are further processed by FeatureJoiner for exact matches, followed by testers for exact and similar address matches, and unmatched entries are sent to a separate table. Most addresses are successfully matched, and unmatched entries are flagged for further review. See experience builder for the visualisation of these findings!</p>
+									
+								</article>
+
+						</div>
 					</div>
 				</section>
 
@@ -167,21 +148,30 @@
 							<section class="col-3 col-6-narrower col-12-mobilep">
 								<h3>Check us out on LinkedIn!</h3>
 								<ul class="links">
-									<li><a href="https://www.linkedin.com/in/mengjiedai/">Mengjie Dai</a></li>
-									<li><a href="www.linkedin.com/in/ayshaqureshi">Aysha Qureshi</a></li>
-									<li><a href="https://www.linkedin.com/in/parkavi-shan">Parkavi Shanmugam</a></li>
+									<li><a href="https://www.linkedin.com/in/mengjiedai/" target="_blank">Mengjie Dai</a></li>
+									<li><a href="https://www.linkedin.com/in/ayshaqureshi/" target="_blank">Aysha Qureshi</a></li>
+									<li><a href="https://www.linkedin.com/in/parkavi-shan" target="_blank">Parkavi Shanmugam</a></li>
 									
 								</ul>
 							</section>
-							
+							<section class="col-6 col-12-narrower">
+							    <h3>Get In Touch</h3>
+							    <form>
+							        <div class="row gtr-50">
+							            <li><a href="mailto:mengjied@yahoo.ca">Mengjie Dai</a></li>
+							            <li><a href="mailto:aysha.qures@outlook.com">Aysha Qureshi</a></li>
+							            <li><a href="mailto:parkavi.shanmugam@flemingcollege.ca">Parkavi Shanmugam</a></li>
+							        </div>
+							    </form>
+							</section>
 						</div>
 					</div>
-
+					
 
 					<!-- Copyright -->
 						<div class="copyright">
 							<ul class="menu">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; MAP Consulting. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 
