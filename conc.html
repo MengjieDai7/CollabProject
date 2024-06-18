@@ -80,17 +80,28 @@
 									<span class="image featured"><img src="images/surveyresults.png"  /></span>
 
 									<p>A Survey123 form captures essential as well as optional address information, including geographic data and concerns. Submissions trigger automated Microsoft Automate emails for easy categorization by type and municipality. A diverse test dataset ensures quality control and is visualized using ArcGIS tools to display trends and patterns.</p>
-
+									<p>Limitations: Survey123 Platform
+									Requires exact address matches; minor errors prevent successful matching.
+									Naming anomalies in the database, such as addresses with attached suite numbers, add complexity.
+									FME Workbench
+									Slow processing due to large datasets; recommended to focus on connected features to speed up.
+									AGOL Dashboard
+									Performance issues with large datasets, leading to slow loading or unresponsiveness; optimize data management to improve functionality.
+									Experience Builder:
+									Early 2024 update allows filtering groups of layers together but has a bug preventing zoom to the selected area.
+									Future fixes from ESRI are anticipated for the zoom issue</p>
 
 									<h3>Alias Names Integration</h3>
 
 									<span class="image featured"><img src="images/prototypemodel.png" /></span>
 									<p>Developed for the stSchools alias names and tested on five other feature classes, this system uses a combination of FeatureJoiner, NeighbourFinder, AttributeManager, and Tester transformers. Addresses are matched by spatial proximity (within 30 meters) and exact attributes. Unmatched or inconsistently matched addresses are flagged for further review.</p>
-
+									<p>Limitations: Using FME Workbench can lead to slow processing times due to the large datasets involved. To improve efficiency, it is recommended to focus on connected features, which can help speed up the processing time and make the workflow more manageable.</p>
+									
 									<h3>Statistical and Cartographic Visualizations</h3>
+									
 									<span class="image featured"><img src="images/expbuilderresult.png"  /></span>
-									<p>	
-									Users can zoom and update the map based on selected municipalities or address types, facilitating detailed geographic analysis. Indicators update dynamically with date and municipality filters, providing immediate insights into survey responses and address point counts. The system includes pie charts for address type distribution and detailed lists for granular data, ensuring a seamless and interactive data exploration experience.</p>
+									<p>Users can zoom and update the map based on selected municipalities or address types, facilitating detailed geographic analysis. Indicators update dynamically with date and municipality filters, providing immediate insights into survey responses and address point counts. The system includes pie charts for address type distribution and detailed lists for granular data, ensuring a seamless and interactive data exploration experience.</p>
+									<p>Limitations: The AGOL Dashboard experiences performance issues when handling large datasets, resulting in slow loading times or unresponsiveness. Optimizing data management can improve functionality and ensure smoother operation. Meanwhile, Experience Builder's early 2024 update will allow filtering groups of layers together, but it currently has a bug that prevents zooming to the selected area. Future fixes from ESRI are anticipated to resolve the zoom issue, enhancing the overall user experience.</p>
 									
 								</article>
 
