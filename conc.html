@@ -25,7 +25,7 @@
 							<ul>
 								<li><a href="index.html"> Home </a></li>
 								<li><a href="mtt.html"> Meet the Team </a></li>
-								<li class="current">
+								<li>
 									<a href="#">Products</a>
 									<ul>
 										<li><a href="alias.html">ALIAS NAME DATABASE SOLUTION</a></li>
@@ -39,7 +39,7 @@
 										</li>
 									</ul>
 								</li>
-								<li><a href="conc.html"> Conclusion </a></li>
+								<li class="current"><a href="conc.html"> Conclusion </a></li>
 								
 								
 							</ul>
@@ -52,40 +52,12 @@
 					
 				</section>
 
-			<!-- Highlights -->
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row gtr-200">
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon solid major fa-paper-plane"></i>
-									<h3>Data Exploration & NENA Standards</h3>
-									<p>Analyzed and familiarized with client-provided address data using NENA standards and Esri's ArcGIS Pro for spatial relationships. Applying NENA data model standards was crucial, necessitating the creation of a new LandmarkAliasName table in the core GDB with the correct format and fields. The project focused on implementing required standards, as outlined in NENA documentation, within the constraints of time. A method for generating NGUIDs according to NENA standards was developed but not required by the client; further details are discussed in the Results and Limitations sections.</p>
-								</div>
-							</section>
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon solid major fa-pencil-alt"></i>
-									<h3>BETA FME Workbench: Spatial Matching Gaps</h3>
-									<p>In the prototype model, FeatureJoiner was used to create an inner join between the alias names Schools table and the core address points table, joining on the full address fields for each table. This unsurprisingly did not match all addresses, as some are entered in different ways between the two tables. The power of spatial relationships were then leveraged to account for such missed addresses. And so, those unaccounted for after FeatureJoiner were passed through the spatially sensitive NeighbourFinder transformer. </p>
-								</div>
-							</section>
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon solid major fa-wrench"></i>
-									<h3>Enhancing Robustness & Integrity</h3>
-									<p>To enhance the robustness of the model and account for various types of matching errors or catching unmatched addresses, Tester and AttributeManager transformers were used. Depending on the nature of the alias point feature class and its matches, spatial relationships to the core address data, and how mismatches and unmatched addresses looked, different translation paths were taken; though the four aforementioned transformers were always used.</p>
-								</div>
-							</section>
-						</div>
-					</div>
-				</section>
-
+			
 			<!-- Gigantic Heading -->
 				<section class="wrapper style2">
 					<div class="container">
 						<header class="major">
-							<h2>Alias Name Integration</h2>
+							<h2>In Conclusion...</h2>
 							<p>This maximizes information available to support emergency response (fire, police, EMS)</p>
 							<span class="image featured"><img src="images/aliasworkflow.png" /></span>
 
@@ -102,28 +74,23 @@
 
 								<article>
 									<header>
-										<h2>Data Exploration</h2>
-										<p>Vital for understanding the problem</p>
+										<h3>Address Data Collection Survey</h3>
 									</header>
 
-									<span class="image featured"><img src="images/dataexplorationalias.png" alt="exploration of hidden address solution" /></span>
+									<span class="image featured"><img src="images/surveyresults.png"  /></span>
 
-									<p>Provides a centralized platform for updating and varifying addresses and carefully modifying the database</p>
+									<p>A Survey123 form captures essential as well as optional address information, including geographic data and concerns. Submissions trigger automated Microsoft Automate emails for easy categorization by type and municipality. A diverse test dataset ensures quality control and is visualized using ArcGIS tools to display trends and patterns.</p>
 
 
-									<h3>Enhancing Robustness and Integrity of the Model</h3>
+									<h3>Alias Names Integration</h3>
 
 									<span class="image featured"><img src="images/prototypemodel.png" /></span>
-									<p>To enhance the robustness of the model and account for various types of matching errors or catching unmatched addresses, Tester and AttributeManager transformers were used. Depending on the nature of the alias point feature class and its matches, spatial relationships to the core address data, and how mismatches and unmatched addresses looked, different translation paths were taken; though the four aforementioned transformers were always used.</p>
+									<p>Developed for the stSchools alias names and tested on five other feature classes, this system uses a combination of FeatureJoiner, NeighbourFinder, AttributeManager, and Tester transformers. Addresses are matched by spatial proximity (within 30 meters) and exact attributes. Unmatched or inconsistently matched addresses are flagged for further review.</p>
 
-									<p>Tester transformers were used to test for potential matches between points that were spatially close but did not have address attribute matches. The following is how similar entries were tested; the method was to simplify address field entries to be lowercase and lacking in punctuation. Depending on what a user may view in terms of punctuation (dashes, for example), they can be added to this tool.</p>
+									<h3>Statistical and Cartographic Visualizations</h3>
+									<span class="image featured"><img src="images/expbuilderresult.png"  /></span>
 									<p>	
-									Address mismatches within 30 meters were often due to discrepancies in punctuation between attribute fields. AttributeManager transformers were used to identify these discrepancies, and the strongest matches were found when both spatial proximity and address attributes aligned. Unmatched addresses were categorized separately and needed manual review, with efforts to refine the model achieving over 97% accuracy in alias matching, supported by Python scripts for backup and data integrity.</p>
-
-									<h3>Final Product</h3>
-									<span class="image featured"><img src="images/finalworkbench.png"  /></span>
-									<p>	
-									To handle inconsistencies in data entry, a robust error-handling method for translating data through spatial and attribute joins and matches is required. A prototype methodology was developed for the stSchools alias names point feature class and tested on five other alias feature classes: stPlaceofWorship, stChildrensService, stPOICinema, stLibrary, and hsHospitals. This method uses the FeatureJoiner, NeighbourFinder, AttributeManager, and Tester transformers, with NeighbourFinder first applied with a 30-meter search radius. Unmatched aliases are further processed by FeatureJoiner for exact matches, followed by testers for exact and similar address matches, and unmatched entries are sent to a separate table. Most addresses are successfully matched, and unmatched entries are flagged for further review. See experience builder for the visualisation of these findings!</p>
+									Users can zoom and update the map based on selected municipalities or address types, facilitating detailed geographic analysis. Indicators update dynamically with date and municipality filters, providing immediate insights into survey responses and address point counts. The system includes pie charts for address type distribution and detailed lists for granular data, ensuring a seamless and interactive data exploration experience.</p>
 									
 								</article>
 
