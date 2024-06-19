@@ -26,10 +26,9 @@
     width: 80%;
     height: 80%;
     border: 2px solid #ccc;  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .dashboard iframe {
         width: 95%;
         height: 70%;
